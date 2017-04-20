@@ -51,7 +51,7 @@ class TabbedView extends Component {
     children.forEach((item, i) => {
         const key = item.key;
         if (i === index) {
-            this.renderedscenekeys[key] = true;
+            this.renderedSceneKeys[key] = true;
             scenes.push(this.renderScene(item, i));
         }
     });
