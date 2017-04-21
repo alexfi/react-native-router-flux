@@ -50,6 +50,9 @@ class TabbedView extends Component {
     const { index, children } = this.props.navigationState;
     children.forEach((item, i) => {
         const key = item.key;
+        if (i !== index && !this.renderedSceneKeys[key]) {
+            return;
+        }
         if (i === index) {
             this.renderedSceneKeys[key] = true;
             scenes.push(this.renderScene(item, i));
